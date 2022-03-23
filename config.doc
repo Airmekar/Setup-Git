@@ -1,17 +1,17 @@
-First-Time Git Setup
-#Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:
+# First-Time Git Setup
+# Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:
 
-#[path]/etc/gitconfig file: Contains values applied to every user on the system and all their repositories. If you pass the option --system to git config, it reads and writes from this file specifically. Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.
+# [path]/etc/gitconfig file: Contains values applied to every user on the system and all their repositories. If you pass the option --system to git config, it reads and writes from this file specifically. Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.
 
-#~/.gitconfig or ~/.config/git/config file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the --global option, and this affects all of the repositories you work with on your system.
+# ~/.gitconfig or ~/.config/git/config file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the --global option, and this affects all of the repositories you work with on your system.
 
-#config file in the Git directory (that is, .git/config) of whatever repository you’re currently using: Specific to that single repository. You can force Git to read from and write to this file with the --local option, but that is in fact the default. Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.
+# config file in the Git directory (that is, .git/config) of whatever repository you’re currently using: Specific to that single repository. You can force Git to read from and write to this file with the --local option, but that is in fact the default. Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.
 
 # Each level overrides values in the previous level, so values in .git/config trump those in [path]/etc/gitconfig.
 
 # You can view all of your settings and where they are coming from using:
 
-$ git config --list --show-origin
+#   git config --list --show-origin
 
 # Your Identity:
 # The first thing you should do when you install Git is to set your user name and email address.
@@ -19,29 +19,29 @@ $ git config --list --show-origin
 #    git config --global user.email johndoe@example.com
 
 # Configuring Git to store your password for you.
-# git config --global credential.helper store
+#    git config --global credential.helper store
 
 # Save the username and password for a session (cache it);
-# git config --global credential.helper cache
+#    git config --global credential.helper cache
 
 # Your Editor:
-# git config --global core.editor vim
+#    git config --global core.editor vim
 #
 # or create a new repository on the command line
-echo "# Setup-Git" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M master
-git remote add origin https://github.com/Airmekar/Setup-Git.git
-git push -u origin master
+#      echo "# Setup-Git" >> README.md
+#      git init
+#      git add README.md
+#      git commit -m "first commit"
+#      git branch -M master
+#      git remote add origin https://github.com/Airmekar/Setup-Git.git
+#      git push -u origin master
 
-or push an existing repository from the command line
-git remote add origin https://github.com/Airmekar/Setup-Git.git
-git branch -M master
-git push -u origin master
+# or push an existing repository from the command line
+#      git remote add origin https://github.com/Airmekar/Setup-Git.git
+#      git branch -M master
+#      git push -u origin master
 
-or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+# or import code from another repository
+# You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
-Thank You!
+# Thank You!
